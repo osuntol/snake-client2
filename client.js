@@ -5,13 +5,16 @@ const connect = function () {
     host: '10.0.2.15',
     port: 50541
   });
+  conn.on('connect', () => {
+   console.log('Success connecting')
+   conn.write('Name: RO')
+  })
 conn.on('data', (data) => {
   console.log('data:', data)
 })
 conn.on('timeout', () => {
   console.log('you ded cuz you idled');
 })
- 
   conn.setEncoding("utf8");
 
   return conn;
