@@ -1,4 +1,4 @@
-const net = require("net")
+const net = require("net");
 
 const connect = function () {
   const conn = net.createConnection({
@@ -6,11 +6,11 @@ const connect = function () {
     port: 50541
   });
   conn.on('connect', () => {
-   console.log('Success connecting')
-   conn.write('Name: RO')
+   console.log('Success connecting');
+   conn.write('Name: RO');
   })
 conn.on('data', (data) => {
-  console.log('data:', data)
+  console.log('data:', data);
 })
 conn.on('timeout', () => {
   console.log('you ded cuz you idled');
