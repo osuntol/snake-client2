@@ -1,7 +1,6 @@
-const { createConnection } = require("net");
-const { connect } = require('./client')
-
 let connection 
+
+//setup input 
 
 const setupInput = function(conn) {
   connection = conn
@@ -13,6 +12,8 @@ const setupInput = function(conn) {
   return stdin;
 };
 
+
+// input for user for movement
 const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
