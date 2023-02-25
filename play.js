@@ -1,4 +1,4 @@
-//require module connect and setuo input from client and input files. 
+//require module connect and setup input from client and input files. 
 
 const {connect} = require('./client.js');
 const { setupInput } = require('./input');
