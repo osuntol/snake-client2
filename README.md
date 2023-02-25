@@ -11,6 +11,7 @@ cd snek-multiplayer
 
 # install and run via npm
 npm install
+
 npm run play
 
 
