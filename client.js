@@ -1,11 +1,12 @@
 const net = require("net");
 const {IP, PORT } = require('./constants')
 
+//funtion that allows file to connect to server
 
 const connect = function () {
   const conn = net.createConnection({
-    IP,
-    PORT
+    host : IP,
+    port : PORT
   });
   conn.on('connect', () => {
    console.log('Success connecting');
